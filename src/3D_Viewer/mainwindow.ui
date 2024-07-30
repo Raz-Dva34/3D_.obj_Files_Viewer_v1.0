@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1237</width>
+    <height>931</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="choose_obj">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>331</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:0.506985, y1:0.0852273, x2:0.532778, y2:1, stop:0.00492611 rgba(16, 16, 16, 255), stop:1 rgba(227, 150, 66, 207));
+}
+
+QPushButton:pressed {
+background-color: qlineargradient(spread:pad, x1:0.506985, y1:0.0852273, x2:0.532778, y2:1, stop:0.00492611 rgba(16, 16, 16, 255), stop:1 rgba(227, 194, 158, 207));
+}</string>
+    </property>
+    <property name="text">
+     <string>Выбрать объект</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>178</y>
+      <width>171</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+    border: 1px solid gray;
+    border-radius: 1px;
+    padding: 1px 18px 1px 13px;
+    min-width: 6em;
+}
+
+QComboBox:editable {
+    background: qlineargradient(spread:pad, x1:0.58633, y1:0.375818, x2:0.02, y2:0.028, stop:0 rgba(35, 33, 33, 255), stop:1 rgba(252, 168, 70, 207));
+}
+
+QComboBox QAbstractItemView {
+    border: 2px solid darkgray;
+    selection-background-color: rgb(255, 179, 85);
+}
+
+</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Параллельная</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Центральная</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="mk_gif">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>870</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:0.506985, y1:0.0852273, x2:0.532778, y2:1, stop:0.00492611 rgba(16, 16, 16, 255), stop:1 rgba(227, 150, 66, 207));
+}
+
+QPushButton:pressed {
+background-color: qlineargradient(spread:pad, x1:0.506985, y1:0.0852273, x2:0.532778, y2:1, stop:0.00492611 rgba(16, 16, 16, 255), stop:1 rgba(227, 194, 158, 207));
+}</string>
+    </property>
+    <property name="text">
+     <string>Создать gif</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="m_x">
+    <property name="geometry">
+     <rect>
+      <x>81</x>
+      <y>317</y>
+      <width>111</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox {
+	selection-background-color: rgb(212, 131, 49);
+}</string>
+    </property>
+    <property name="minimum">
+     <number>-99</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="m_y">
+    <property name="geometry">
+     <rect>
+      <x>81</x>
+      <y>357</y>
+      <width>111</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox {
+	selection-background-color: rgb(212, 131, 49);
+}</string>
+    </property>
+    <property name="minimum">
+     <number>-99</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="m_z">
+    <property name="geometry">
+     <rect>
+      <x>81</x>
+      <y>397</y>
+      <width>111</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox {
+	selection-background-color: rgb(212, 131, 49);
+}</string>
+    </property>
+    <property name="minimum">
+     <number>-99</number>
+    </property>
+   </widget>
+   <widget class="QSlider" name="h_v_x">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>487</y>
+      <width>160</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider::groove:horizontal {
+    border: 1px solid #999999;
+    height: 5px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #B1B1B1, stop:1 #c4c4c4);
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(spread:pad, x1:0.58633, y1:0.375818, x2:0.02, y2:0.028, stop:0 rgba(35, 33, 33, 255), stop:1 rgba(252, 168, 70, 207));
+    border: 1px solid #5c5c5c;
+    width: 15px;
+    margin: -5px 0; /* handle is placed by default on the contents rect of the groove. Expand outside the groove */
+    border-radius: 5px;
+}
+
+QSlider::add-page:horizontal {
+    background: rgb(42, 42, 42);
+}
+
+QSlider::sub-page:horizontal {
+    background: rgb(255, 179, 85);
+}</string>
+    </property>
+    <property name="minimum">
+     <number>-360</number>
+    </property>
+    <property name="maximum">
+     <number>360</number>
+    </property>
+    <property name="singleStep">
+     <number>5</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="h_v_y">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>527</y>
+      <width>160</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider::groove:horizontal {
+    border: 1px solid #999999;
+    height: 5px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #B1B1B1, stop:1 #c4c4c4);
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(spread:pad, x1:0.58633, y1:0.375818, x2:0.02, y2:0.028, stop:0 rgba(35, 33, 33, 255), stop:1 rgba(252, 168, 70, 207));
+    border: 1px solid #5c5c5c;
+    width: 15px;
+    margin: -5px 0; /* handle is placed by default on the contents rect of the groove. Expand outside the groove */
+    border-radius: 5px;
+}
+
+QSlider::add-page:horizontal {
+    background: rgb(42, 42, 42);
+}
+
+QSlider::sub-page:horizontal {
+    background: rgb(255, 179, 85);
+}</string>
+    </property>
+    <property name="minimum">
+     <number>-360</number>
+    </property>
+    <property name="maximum">
+     <number>360</number>
+    </property>
+    <property name="singleStep">
+     <number>5</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="h_v_z">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>567</y>
+      <width>160</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider::groove:horizontal {
+    border: 1px solid #999999;
+    height: 5px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #B1B1B1, stop:1 #c4c4c4);
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(spread:pad, x1:0.58633, y1:0.375818, x2:0.02, y2:0.028, stop:0 rgba(35, 33, 33, 255), stop:1 rgba(252, 168, 70, 207));
+    border: 1px solid #5c5c5c;
+    width: 15px;
+    margin: -5px 0; /* handle is placed by default on the contents rect of the groove. Expand outside the groove */
+    border-radius: 5px;
+}
+
+QSlider::add-page:horizontal {
+    background: rgb(42, 42, 42);
+}
+
+QSlider::sub-page:horizontal {
+    background: rgb(255, 179, 85);
+}</string>
+    </property>
+    <property name="minimum">
+     <number>-360</number>
+    </property>
+    <property name="maximum">
+     <number>360</number>
+    </property>
+    <property name="singleStep">
+     <number>5</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="line_scale">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>687</y>
+      <width>62</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox {
+	selection-background-color: rgb(212, 131, 49);
+}</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="peaks_scale">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>787</y>
+      <width>62</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox {
+	selection-background-color: rgb(212, 131, 49);
+}</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Название файла:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Количество вершин:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Количество рёбер:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Тип проекции:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>225</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Масштаб:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>ПЕРЕМЕЩЕНИЕ</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>320</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>360</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Y</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>400</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Z</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>570</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Z</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>530</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Y</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>460</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ВРАЩЕНИЕ</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>490</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="v_x">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>487</y>
+      <width>111</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox {
+	selection-background-color: rgb(212, 131, 49);
+}</string>
+    </property>
+    <property name="minimum">
+     <number>-360</number>
+    </property>
+    <property name="maximum">
+     <number>360</number>
+    </property>
+    <property name="singleStep">
+     <number>1</number>
+    </property>
+    <property name="stepType">
+     <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="v_z">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>567</y>
+      <width>111</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox {
+	selection-background-color: rgb(212, 131, 49);
+}</string>
+    </property>
+    <property name="minimum">
+     <number>-360</number>
+    </property>
+    <property name="maximum">
+     <number>360</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="v_y">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>527</y>
+      <width>111</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox {
+	selection-background-color: rgb(212, 131, 49);
+}</string>
+    </property>
+    <property name="minimum">
+     <number>-360</number>
+    </property>
+    <property name="maximum">
+     <number>360</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>640</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Тип линии:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cng_line">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>630</y>
+      <width>131</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+    border: 1px solid gray;
+    border-radius: 1px;
+    padding: 1px 18px 1px 13px;
+    min-width: 6em;
+}
+
+QComboBox:editable {
+    background: qlineargradient(spread:pad, x1:0.58633, y1:0.375818, x2:0.02, y2:0.028, stop:0 rgba(35, 33, 33, 255), stop:1 rgba(252, 168, 70, 207));
+}
+
+QComboBox QAbstractItemView {
+    border: 2px solid darkgray;
+    selection-background-color: rgb(255, 179, 85);
+}
+
+</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Сплошная</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Пунктирная</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QSlider" name="h_line_scale">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>687</y>
+      <width>160</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider::groove:horizontal {
+    border: 1px solid #999999;
+    height: 5px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #B1B1B1, stop:1 #c4c4c4);
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(spread:pad, x1:0.58633, y1:0.375818, x2:0.02, y2:0.028, stop:0 rgba(35, 33, 33, 255), stop:1 rgba(252, 168, 70, 207));
+    border: 1px solid #5c5c5c;
+    width: 15px;
+    margin: -5px 0; /* handle is placed by default on the contents rect of the groove. Expand outside the groove */
+    border-radius: 5px;
+}
+
+QSlider::add-page:horizontal {
+    background: rgb(42, 42, 42);
+}
+
+QSlider::sub-page:horizontal {
+    background: rgb(255, 179, 85);
+}</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>690</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Толщина:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_16">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>740</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Тип вершины:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="choose_pieaks">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>730</y>
+      <width>131</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+    border: 1px solid gray;
+    border-radius: 1px;
+    padding: 1px 18px 1px 13px;
+    min-width: 6em;
+}
+
+QComboBox:editable {
+    background: qlineargradient(spread:pad, x1:0.58633, y1:0.375818, x2:0.02, y2:0.028, stop:0 rgba(35, 33, 33, 255), stop:1 rgba(252, 168, 70, 207));
+}
+
+QComboBox QAbstractItemView {
+    border: 2px solid darkgray;
+    selection-background-color: rgb(255, 179, 85);
+}
+
+</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Отсутствует</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Круг</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Квадрат</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_17">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>790</y>
+      <width>58</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Размер:</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="h_peaks_scale">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>787</y>
+      <width>160</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider::groove:horizontal {
+    border: 1px solid #999999;
+    height: 5px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #B1B1B1, stop:1 #c4c4c4);
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(spread:pad, x1:0.58633, y1:0.375818, x2:0.02, y2:0.028, stop:0 rgba(35, 33, 33, 255), stop:1 rgba(252, 168, 70, 207));
+    border: 1px solid #5c5c5c;
+    width: 15px;
+    margin: -5px 0; /* handle is placed by default on the contents rect of the groove. Expand outside the groove */
+    border-radius: 5px;
+}
+
+QSlider::add-page:horizontal {
+    background: rgb(42, 42, 42);
+}
+
+QSlider::sub-page:horizontal {
+    background: rgb(255, 179, 85);
+}</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fon">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>870</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:0.506985, y1:0.0852273, x2:0.532778, y2:1, stop:0.00492611 rgba(16, 16, 16, 255), stop:1 rgba(227, 150, 66, 207));
+}
+
+QPushButton:pressed {
+background-color: qlineargradient(spread:pad, x1:0.506985, y1:0.0852273, x2:0.532778, y2:1, stop:0.00492611 rgba(16, 16, 16, 255), stop:1 rgba(227, 194, 158, 207));
+}</string>
+    </property>
+    <property name="text">
+     <string>Фон</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup</string>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="peak">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>870</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:0.506985, y1:0.0852273, x2:0.532778, y2:1, stop:0.00492611 rgba(16, 16, 16, 255), stop:1 rgba(227, 150, 66, 207));
+}
+
+QPushButton:pressed {
+background-color: qlineargradient(spread:pad, x1:0.506985, y1:0.0852273, x2:0.532778, y2:1, stop:0.00492611 rgba(16, 16, 16, 255), stop:1 rgba(227, 194, 158, 207));
+}</string>
+    </property>
+    <property name="text">
+     <string>Вершина</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup</string>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="eadge">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>870</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:0.506985, y1:0.0852273, x2:0.532778, y2:1, stop:0.00492611 rgba(16, 16, 16, 255), stop:1 rgba(227, 150, 66, 207));
+}
+
+QPushButton:pressed {
+background-color: qlineargradient(spread:pad, x1:0.506985, y1:0.0852273, x2:0.532778, y2:1, stop:0.00492611 rgba(16, 16, 16, 255), stop:1 rgba(227, 194, 158, 207));
+}</string>
+    </property>
+    <property name="text">
+     <string>Ребро</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup</string>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Sbros">
+    <property name="geometry">
+     <rect>
+      <x>501</x>
+      <y>870</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:0.506985, y1:0.0852273, x2:0.532778, y2:1, stop:0.00492611 rgba(16, 16, 16, 255), stop:1 rgba(227, 150, 66, 207));
+}
+
+QPushButton:pressed {
+background-color: qlineargradient(spread:pad, x1:0.506985, y1:0.0852273, x2:0.532778, y2:1, stop:0.00492611 rgba(16, 16, 16, 255), stop:1 rgba(227, 194, 158, 207));
+}</string>
+    </property>
+    <property name="text">
+     <string>Сбросить</string>
+    </property>
+   </widget>
+   <widget class="MyOpenGLWidget" name="cinema">
+    <property name="geometry">
+     <rect>
+      <x>381</x>
+      <y>20</y>
+      <width>831</width>
+      <height>820</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_18">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>840</y>
+      <width>58</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ЦВЕТ</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="kolvo_pieaks">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>98</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(42, 42, 42);
+border-color: gray;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="kolvo_reber">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>128</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(42, 42, 42);
+border-color: gray;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="name">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>68</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(42, 42, 42);
+border-color: gray;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>870</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:0.506985, y1:0.0852273, x2:0.532778, y2:1, stop:0.00492611 rgba(16, 16, 16, 255), stop:1 rgba(227, 150, 66, 207));
+}
+
+QPushButton:pressed {
+background-color: qlineargradient(spread:pad, x1:0.506985, y1:0.0852273, x2:0.532778, y2:1, stop:0.00492611 rgba(16, 16, 16, 255), stop:1 rgba(227, 194, 158, 207));
+}</string>
+    </property>
+    <property name="text">
+     <string>Выход</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_plus">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>230</y>
+      <width>71</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:0.506985, y1:0.0852273, x2:0.532778, y2:1, stop:0.00492611 rgba(16, 16, 16, 255), stop:1 rgba(227, 150, 66, 207));
+}
+
+QPushButton:pressed {
+background-color: qlineargradient(spread:pad, x1:0.506985, y1:0.0852273, x2:0.532778, y2:1, stop:0.00492611 rgba(16, 16, 16, 255), stop:1 rgba(227, 194, 158, 207));
+}</string>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">scale</string>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="pushButton_minus">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>230</y>
+      <width>71</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:0.506985, y1:0.0852273, x2:0.532778, y2:1, stop:0.00492611 rgba(16, 16, 16, 255), stop:1 rgba(227, 150, 66, 207));
+}
+
+QPushButton:pressed {
+background-color: qlineargradient(spread:pad, x1:0.506985, y1:0.0852273, x2:0.532778, y2:1, stop:0.00492611 rgba(16, 16, 16, 255), stop:1 rgba(227, 194, 158, 207));
+}</string>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">scale</string>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="mk_screen">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>870</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:0.506985, y1:0.0852273, x2:0.532778, y2:1, stop:0.00492611 rgba(16, 16, 16, 255), stop:1 rgba(227, 150, 66, 207));
+}
+
+QPushButton:pressed {
+background-color: qlineargradient(spread:pad, x1:0.506985, y1:0.0852273, x2:0.532778, y2:1, stop:0.00492611 rgba(16, 16, 16, 255), stop:1 rgba(227, 194, 158, 207));
+}</string>
+    </property>
+    <property name="text">
+     <string>Скриншот</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="format">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>870</y>
+      <width>129</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+    border: 1px solid gray;
+    border-radius: 1px;
+    padding: 1px 18px 1px 13px;
+    min-width: 6em;
+}
+
+QComboBox:editable {
+    background: qlineargradient(spread:pad, x1:0.58633, y1:0.375818, x2:0.02, y2:0.028, stop:0 rgba(35, 33, 33, 255), stop:1 rgba(252, 168, 70, 207));
+}
+
+QComboBox QAbstractItemView {
+    border: 2px solid darkgray;
+    selection-background-color: rgb(255, 179, 85);
+}
+
+</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>jpeg</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>bmp</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyOpenGLWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header location="global">glwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+  <buttongroup name="scale"/>
+ </buttongroups>
+</ui>
